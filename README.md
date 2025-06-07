@@ -3,45 +3,45 @@
 • Добавить в виртуальную машину несколько дисков
 
 Добавили в виртуальную машину несколько дисков:
-![img_1.png](imgs/img_1.png)
+![img_1.png](imgs/HW2/img_1.png)
 
 На всякий случай удаляем супер блоки на дисках, в которых могут быть метаданные предыдущих RAID-массивов. Иначе, мы
 не сможем использовать диск для создания RAID.
-![img_2.png](imgs/img_2.png)
+![img_2.png](imgs/HW2/img_2.png)
 
 • Собрать RAID-0/1/5/10 на выбор
 
 Создаем RAID-1 из 4х дисков:
-![img_3.png](imgs/img_3.png)
+![img_3.png](imgs/HW2/img_3.png)
 
 Убеждаемся, что с RAIDом все ок и он содержит нами указанные диски:
-![img_4.png](imgs/img_4.png)
+![img_4.png](imgs/HW2/img_4.png)
 
 • Сломать и починить RAID
 
 Сломали RAID, путем зафейливования диска /dev/sde. Теперь видим флаг F у этого диска в RAID.
-![img_5.png](imgs/img_5.png)
+![img_5.png](imgs/HW2/img_5.png)
 
 Удалили этот диск из массива дисков в RAID.
-![img_6.png](imgs/img_6.png)
+![img_6.png](imgs/HW2/img_6.png)
 
 Имеем следующую картину по RAIDу. Видим, что работающих 3 блочных устройства из 4х. Добавляем отсутствующий..
-![img_7.png](imgs/img_7.png)
+![img_7.png](imgs/HW2/img_7.png)
 
 Добавили диск обратно. Видим, что он появился в RAID.
-![img_8.png](imgs/img_8.png)
+![img_8.png](imgs/HW2/img_8.png)
 
 • Создать GPT таблицу, пять разделов и смонтировать их в системе.
 
 Создали разделы на RAID.
-![img_9.png](imgs/img_9.png)
+![img_9.png](imgs/HW2/img_9.png)
 Видим, что RAID-1 соответствует своей структуре на уровне разделов блочных устройств.
-![img_10.png](imgs/img_10.png)
+![img_10.png](imgs/HW2/img_10.png)
 
 С помощью mkfs и mount, создали файловые системы на разделах и смонтировали их в нужные каталоги.
-![img_2.png](img_2.png)
-![img_1.png](img_1.png)
-![img_11.png](imgs/img_11.png)
+![img_2.png](imgs/HW3/img_2.png)
+![img_1.png](imgs/HW3/img_1.png)
+![img_11.png](imgs/HW2/img_11.png)
 
 ДЗ. Обновление ядра системы
 
@@ -135,5 +135,5 @@ kirill@kirill-server:~$ uname -r
 ```
 Перезагрузили машину с помощью sudo reboot и видим новую версию ядра 5.15.182-0515182-generic
 
-![img.png](img.png)
+![img.png](imgs/HW3/img.png)
 
